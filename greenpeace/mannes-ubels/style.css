@@ -454,8 +454,10 @@ body {
 }
 
 .content-node.figure .caption {
-  font-size: 14px;
+  font-size: 13px;
   color: #777;
+  text-align: left;
+  line-height: 20px;
 }
 
 .content-node.figure img {
@@ -479,16 +481,14 @@ body {
 
 .content-node.web-page .page-wrapper {
   max-width: 700px;
-  height: 400px;
+  height: 350px;
   margin: auto;
-  background: #ccc;
 }
 
 .content-node.web-page .page-wrapper iframe {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  border: 1px solid #ccc;
 }
 
 pre {
