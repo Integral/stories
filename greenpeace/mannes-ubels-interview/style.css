@@ -545,7 +545,7 @@ code {
 /* Video
 ------------------------------------------------------- */
 
-+.content-node.video {
+.content-node.video {
   padding-top: 20px;
   padding-bottom: 50px;
 }
