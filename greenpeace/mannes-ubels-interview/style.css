@@ -545,6 +545,12 @@ code {
 /* Video
 ------------------------------------------------------- */
 
++.content-node.video {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+
 .content-node.video .content {
   text-align: center;
   margin: 0px auto;
