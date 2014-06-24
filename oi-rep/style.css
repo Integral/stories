@@ -119,7 +119,7 @@ body {
   -webkit-font-smoothing: antialiased;
 /*  color: rgba(0,0,0,0.75);
   color: rgba(0,0,0,0.75);*/
-  color: #444;
+  color: #111;
 }
 
 strong { font-weight: bold; }
@@ -438,7 +438,8 @@ a {
 }
 
 .content-node.list-item.level-1 .content {
-  /*margin-left: 20px;*/
+  margin-left: 30px;
+  margin-bottom: 10px;
 }
 
 .content-node.list-item.level-2 .content {
