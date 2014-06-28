@@ -80,10 +80,10 @@ table {
 
 .row .one     { width: 8.33% }
 .row .two     { width: 16.66% }
-.row .three   { width: 25% }
+.row .three   { width: 24% }
 .row .four    { width: 33.33% }
 .row .five    { width: 41.66% }
-.row .six     { width: 50% }
+.row .six     { width: 52% }
 .row .seven   { width: 58.33% }
 .row .eight   { width: 66.66% }
 .row .nine    { width: 75% }
@@ -114,8 +114,8 @@ img { display: block; max-width: 100%; }
 body {
   /*font-family: 'Palatino', Georgia;*/
   font-family: "Helvetica,Arial,sans-serif"; /*'Adobe Garamond Pro'*/
-  font-size: 15px;
-  line-height: 23px;
+  font-size: 17px;
+  line-height: 27px;
   -webkit-font-smoothing: antialiased;
 /*  color: rgba(0,0,0,0.75);
   color: rgba(0,0,0,0.75);*/
@@ -349,7 +349,7 @@ a {
 .content-node.text {
   /*max-width: 640px;*/
   /*margin: 0px auto;*/
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 
@@ -357,22 +357,22 @@ a {
 ------------------------------------------------------- */
 
 .content-node.blockquote {
-  margin-bottom: 30px;
+  margin: 30px auto;
 }
 
 .content-node.blockquote .content {
   /*max-width: 640px;*/
   /*margin: 0px auto;*/
-  
-  font-size: 20px;
-  /*font-family: "Georgia";*/
-  /*font-weight: bold;*/
-  font-style: italic;
-  line-height: 25px;
+  font-family: Arial;
+  font-size: 17px;
+  line-height: 27px;
   padding: 0px 20px;
   border-left: 1px solid #e6e6e6;
 }
 
+.content-node.blockquote .content a {
+  text-decoration: none;
+}
 
 /* Audio
 ------------------------------------------------------- */
@@ -406,7 +406,7 @@ a {
 ------------------------------------------------------- */
 
 .content-node.code-block {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   /*background: rgb(249, 249, 249);*/
 }
 
@@ -443,7 +443,7 @@ a {
 }
 
 .content-node.list-item .content:before {
-  content: '· ';
+  content: '- ';
 }
 
 .content-node.list-item .content {
