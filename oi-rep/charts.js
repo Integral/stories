@@ -168,9 +168,13 @@
   };
   var ta = RegExp("^(?:([^:/?#.]+):)?(?://(?:([^/?#]*)@)?([\\w\\d\\-\\u0100-\\uffff.%]*)(?::([0-9]+))?)?([^?#]+)?(?:\\?([^#]*))?(?:#(.*))?$");
 
-  function $(a) {
-  	var rand = timer();
-    setTimeout(function(){X(P)(a)},rand)
+ function $(a) {
+    var spinner = new Spinner().spin(),
+        target = document.getElementById(a.containerId).parentNode;
+    target.appendChild(spinner.el);
+    target.style.backgroundColor = 'rgba(0, 0, 0, 0.05)'
+    var rand = timer();
+    setTimeout(function(){X(P)(a);spinner.stop();target.style.backgroundColor = 'transparent';},rand)
   }(function() {
     var a = eval,
         b;
