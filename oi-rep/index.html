@@ -21,6 +21,9 @@
       return $(".blur").css("opacity", oVal);
     });
 
+    var timeCounter = 0;
+    timer = function(){timeCounter = timeCounter + 2000; return timeCounter;}
+
     var Toc = function() {
       this.winScrollTop;
       this.lastAnchor;
@@ -96,7 +99,7 @@
             closestAnchorIdx = null;
 
         that.headings.each(function(idx) {
-          var distance = Math.abs(($(this).next().length ? $(this).next() : $(this)).offset().top - that.winScrollTop + 800);
+          var distance = Math.abs(($(this).next().length ? $(this).next() : $(this)).offset().top - that.winScrollTop + 400);
           if (closestAnchorDistance == null || distance < closestAnchorDistance) {
             closestAnchorDistance = distance;
             closestAnchorIdx = idx;
@@ -122,24 +125,6 @@
         that.lastAnchor = that.currentAnchor;
       }, 0);
     }
-    // window.onload = function() {
-    //   var imageEls = document.querySelectorAll(".figure img");
-    //   for (var i = 0; i < imageEls.length; i++) {
-    //     var imageEl = imageEls[i];
-    //     var parent = imageEl.parentNode;
-    //     var captionEl = parent.querySelector(".caption");
-    //     if (captionEl) {
-    //       function transferWidth() {
-    //         captionEl.style["max-width"] = imageEl.naturalWidth+"px";
-    //       }
-    //       if (imageEl.complete) {
-    //         transferWidth();
-    //       } else {
-    //         imageEl.onload = transferWidth;
-    //       }
-    //     }
-    //   };
-    // };
   </script>
 
   <title>Протест на тормозах: политические задержания в 2013 году</title>
@@ -306,7 +291,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    “Протест на тормозах: политические задержания в 2013 году” - второй годовой доклад ОВД-Инфо. В декабре 2011 года мы, группа журналистов, программистов и активистов, начали в ежедневном режиме отслеживать и публиковать данные о политических задержаниях в Москве. По следам этого мониторинга мы опубликовали доклад “Человек из автозака - политические задержания в Москве в 2012 году”, в котором представили данные, собранные за первый год работы, и описали сам феномен “политического задержания”. По сути, в предыдущем докладе мы занимались деконструкцией одного отдельно взятого института государственного подавления свободы.
+    “Протест на тормозах: политические задержания в 2013 году” - второй годовой доклад ОВД-Инфо. В декабре 2011 года мы, группа журналистов, программистов и активистов, начали в ежедневном режиме отслеживать и публиковать данные о политических задержаниях в Москве. По следам этого мониторинга мы опубликовали доклад <a href="http://reports.ovdinfo.org/2012/report" title="">“Человек из автозака - политические задержания в Москве в 2012 году”</a>, в котором представили данные, собранные за первый год работы, и описали сам феномен “политического задержания”. По сути, в предыдущем докладе мы занимались деконструкцией одного отдельно взятого института государственного подавления свободы.
   </div>
 
   <!-- Right column -->
@@ -314,6 +299,8 @@
       <div class="remarks">
         
         
+        
+          
         
       </div>
   </div>
@@ -978,7 +965,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&range=A1%3AC14&gid=69&pub=1","options":{"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"useFormatFromData":true,"title":"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439","minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"booleanRole":"certainty","title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043f\u043e \u043c\u0435\u0441\u044f\u0446\u0430\u043c (\u041c\u043e\u0441\u043a\u0432\u0430, 2012 - 2013 \u0433\u043e\u0434)","height":400,"animation":{"duration":0},"legend":"right","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"isStacked":false,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 7"}
 </script>
   </div>
@@ -1018,7 +1005,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&range=G1%3AS3&gid=35&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"title":"% \u043e\u0442 \u043e\u0431\u0449\u0435\u0433\u043e \u0447\u0438\u0441\u043b\u0430 \u0437\u0430 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u0437\u0430 \u0433\u043e\u0434","useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null}],"series":{"0":{"color":"#666666"},"1":{"color":"#666666"},"2":{"color":"#666666"},"3":{"color":"#666666"},"4":{"color":"#660000"},"5":{"color":"#990000"},"6":{"color":"#660000"},"7":{"color":"#990000"},"8":{"color":"#666666"},"9":{"color":"#666666"},"10":{"color":"#666666"},"11":{"color":"#666666"}},"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043f\u043e \u043c\u0435\u0441\u044f\u0446\u0430\u043c (\u041c\u043e\u0441\u043a\u0432\u0430)","booleanRole":"certainty","height":400,"animation":{"duration":0},"legend":"right","width":700,"hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"isStacked":true,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 4"}
 </script>
   </div>
@@ -1119,7 +1106,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&merge=COLS&range=A15%3AA19%2CC15%3AC19&gid=8&pub=1","options":{"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"booleanRole":"certainty","title":"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043f\u043e \u0440\u0435\u0433\u0438\u043e\u043d\u0430\u043c (2013 \u0433\u043e\u0434)","height":400,"animation":{"duration":0},"legend":"none","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"tooltip":{},"isStacked":false},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 37"}
 </script>
   </div>
@@ -1159,7 +1146,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&merge=COLS&range=M21%3AM24%2CP21%3AP24&gid=8&pub=1","options":{"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"booleanRole":"certainty","title":"% \u043e\u0442 \u0447\u0438\u0441\u043b\u0435\u043d\u043d\u043e\u0441\u0442\u0438 \u043d\u0430\u0441\u0435\u043b\u0435\u043d\u0438\u044f (\u043f\u043e \u0434\u0430\u043d\u043d\u044b\u043c \u043d\u0430 \u043d\u0430\u0447\u0430\u043b\u043e 2014 \u0433\u043e\u0434\u0430*)","height":400,"animation":{"duration":0},"legend":"none","width":700,"hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"tooltip":{},"isStacked":false},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 8"}
 </script>
   </div>
@@ -1226,7 +1213,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&merge=COLS&range=A16%3AA19%2CD16%3AD19&gid=8&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"title":"\u0421\u0440\u0435\u0434\u043d\u0435\u0435 \u0447\u0438\u0441\u043b\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u043d\u044b\u0445 \u043d\u0430 \u043e\u0434\u043d\u043e\u0439 \u0430\u043a\u0446\u0438\u0438 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438","booleanRole":"certainty","height":400,"animation":{"duration":0},"legend":"none","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"tooltip":{"trigger":"none"},"isStacked":false},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 38"}
 </script>
   </div>
@@ -1276,7 +1263,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&range=F2%3AH14&gid=62&pub=1","options":{"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"useFormatFromData":true,"title":"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438","minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"booleanRole":"certainty","title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438 \u043f\u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0430\u043c (2012-2013 \u0433\u043e\u0434)","height":400,"animation":{"duration":0},"legend":"right","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"isStacked":false,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 30"}
 </script>
   </div>
@@ -1316,7 +1303,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&range=A1%3AC13&gid=62&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"title":"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439","useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043f\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u043c \u0440\u0430\u0437\u043d\u043e\u0433\u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0430 (\u041c\u043e\u0441\u043a\u0432\u0430, 2012-2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":400,"animation":{"duration":0},"legend":"right","width":700,"hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"tooltip":{},"isStacked":false},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 6"}
 </script>
   </div>
@@ -1375,7 +1362,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&merge=COLS&range=A2%3AA11%2CB2%3AB11&gid=6&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"animation":{"duration":500},"colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395","#994499","#22AA99","#AAAA11","#6633CC","#E67300","#8B0707","#651067","#329262","#5574A6","#3B3EAC","#B77322","#16D620","#B91383","#F4359E","#9C5935","#A9C413","#2A778D","#668D1C","#BEA413","#0C5922","#743411"],"width":700,"is3D":true,"hAxis":{"title":"Horizontal axis title","useFormatFromData":true,"minValue":null,"viewWindow":{"max":null,"min":null},"maxValue":null},"vAxes":[{"title":"Left vertical axis title","useFormatFromData":true,"minValue":null,"viewWindow":{"max":null,"min":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"max":null,"min":null},"maxValue":null}],"pieHole":0,"booleanRole":"certainty","title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u043f\u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0443 (\u041c\u043e\u0441\u043a\u0432\u0430, 2013 \u0433\u043e\u0434)","height":400,"legend":"labeled","focusTarget":"series","tooltip":{"trigger":"none"}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"PieChart","chartName":"Chart 6"}
 </script>
   </div>
@@ -1396,7 +1383,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&merge=COLS&range=A2%3AA11%2CC2%3AC11&gid=6&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"animation":{"duration":500},"colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395","#994499","#22AA99","#AAAA11","#6633CC","#E67300","#8B0707","#651067","#329262","#5574A6","#3B3EAC","#B77322","#16D620","#B91383","#F4359E","#9C5935","#A9C413","#2A778D","#668D1C","#BEA413","#0C5922","#743411"],"width":700,"is3D":true,"hAxis":{"title":"Horizontal axis title","useFormatFromData":true,"minValue":null,"viewWindow":{"max":null,"min":null},"maxValue":null},"vAxes":[{"title":"Left vertical axis title","useFormatFromData":true,"minValue":null,"viewWindow":{"max":null,"min":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"max":null,"min":null},"maxValue":null}],"pieHole":0,"booleanRole":"certainty","title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043f\u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0443 (\u041c\u043e\u0441\u043a\u0432\u0430, 2013 \u0433\u043e\u0434)","height":400,"legend":"labeled","focusTarget":"series","tooltip":{"trigger":"none"}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"PieChart","chartName":"Chart 7"}
 </script>
   </div>
@@ -1417,7 +1404,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&merge=COLS&range=A2%3AA14%2CH2%3AI14&gid=57&pub=1","options":{"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"booleanRole":"certainty","title":"\u0421\u0440\u0435\u0434\u043d\u0435\u0435 \u0447\u0438\u0441\u043b\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043d\u0430 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u0445 \u0440\u0430\u0437\u043d\u043e\u0433\u043e \u0442\u0438\u043f\u0430 (\u041c\u043e\u0441\u043a\u0432\u0430, 2012-2013)","height":400,"animation":{"duration":0},"legend":"right","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"tooltip":{},"isStacked":false},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 2"}
 </script>
   </div>
@@ -1486,7 +1473,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&range=A1%3AM3&gid=48&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"title":"% \u043e\u0442 \u043e\u0431\u0449\u0435\u0433\u043e \u0447\u0438\u0441\u043b\u0430 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438 \u0437\u0430 \u0433\u043e\u0434","useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null}],"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u043f\u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0443 (\u041c\u043e\u0441\u043a\u0432\u0430, 2012-2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":400,"animation":{"duration":0},"legend":"right","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"isStacked":true,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 9"}
 </script>
   </div>
@@ -1507,7 +1494,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&range=A1%3AM3&gid=46&pub=1","options":{"vAxes":[{"useFormatFromData":true,"title":"% \u043e\u0442 \u043e\u0431\u0449\u0435\u0433\u043e \u0447\u0438\u0441\u043b\u0430 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u0437\u0430 \u0433\u043e\u0434","minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"booleanRole":"certainty","title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043f\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u043c \u0440\u0430\u0437\u043d\u044b\u0445 \u0444\u043e\u0440\u043c\u0430\u0442\u043e\u0432 (\u041c\u043e\u0441\u043a\u0432\u0430, 2012-2013 \u0433\u043e\u0434)","height":400,"animation":{"duration":0},"legend":"right","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"isStacked":true,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 1"}
 </script>
   </div>
@@ -1547,7 +1534,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&range=A1%3AK13&gid=60&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"title":"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439","useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null}],"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0440\u0430\u0437\u043d\u043e\u0433\u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0430 \u043f\u043e \u043c\u0435\u0441\u044f\u0446\u0430\u043c (\u041c\u043e\u0441\u043a\u0432\u0430, 2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":400,"animation":{"duration":0},"legend":"right","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"tooltip":{"trigger":"none"},"isStacked":true},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 5"}
 </script>
   </div>
@@ -1568,7 +1555,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=1&headers=1&range=A1%3AK21&gid=53&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"title":"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438","useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null}],"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0440\u0430\u0437\u043d\u044b\u0445 \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0442\u043e\u0440\u043e\u0432 \u043f\u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0430\u043c (\u041c\u043e\u0441\u043a\u0432\u0430, 2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":400,"animation":{"duration":0},"legend":"right","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"isStacked":true,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 23"}
 </script>
   </div>
@@ -1648,7 +1635,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&merge=COLS&range=A2%3AA11%2CD2%3AD11&gid=6&pub=1","options":{"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"booleanRole":"certainty","title":"\u0421\u0440\u0435\u0434\u043d\u0435\u0435 \u0447\u0438\u0441\u043b\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043d\u0430 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u0445 \u0440\u0430\u0437\u043d\u043e\u0433\u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0430 (\u041c\u043e\u0441\u043a\u0432\u0430, 2013 \u0433\u043e\u0434)","height":400,"animation":{"duration":0},"legend":"none","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"isStacked":false,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 5"}
 </script>
   </div>
@@ -1707,7 +1694,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=1&headers=1&range=A55%3AJ57&gid=64&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"vAxes":[{"title":null,"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null}],"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043d\u0430 \u043c\u0438\u0442\u0438\u043d\u0433\u0430\u0445 \u0440\u0430\u0437\u043d\u043e\u0439 \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0438 (\u041c\u043e\u0441\u043a\u0432\u0430, 2012-2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":400,"animation":{"duration":0},"legend":"right","width":700,"hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"tooltip":{},"isStacked":false},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 1"}
 </script>
   </div>
@@ -1789,7 +1776,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&range=A1%3AM11&gid=61&pub=1","options":{"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"useFormatFromData":true,"title":"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438","minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"booleanRole":"certainty","title":"\u0422\u0435\u043c\u0430\u0442\u0438\u043a\u0430 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0440\u0430\u0437\u043d\u044b\u0445 \u0444\u043e\u0440\u043c\u0430\u0442\u043e\u0432 (\u041c\u043e\u0441\u043a\u0432\u0430, 2013 \u0433\u043e\u0434)","height":400,"animation":{"duration":0},"legend":"right","width":700,"hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"isStacked":true,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 15"}
 </script>
   </div>
@@ -1923,7 +1910,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&range=A1%3AL5&gid=49&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"10"},"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"title":"% \u043e\u0442 \u043e\u0431\u0449\u0435\u0433\u043e \u0447\u0438\u0441\u043b\u0430 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438 \u0432 \u0440\u0435\u0433\u0438\u043e\u043d\u0435","useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null}],"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438 \u043f\u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0430\u043c \u0432 \u0440\u0430\u0437\u043d\u044b\u0445 \u0440\u0435\u0433\u0438\u043e\u043d\u0430\u0445 (2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":400,"animation":{"duration":0},"legend":"right","width":700,"hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"tooltip":{},"isStacked":true},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 9"}
 </script>
   </div>
@@ -1944,7 +1931,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&range=A1%3AL5&gid=47&pub=1","options":{"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"useFormatFromData":true,"title":"% \u043e\u0442 \u043e\u0431\u0449\u0435\u0433\u043e \u0447\u0438\u0441\u043b\u0430 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u043d\u044b\u0445 \u0432 \u0440\u0435\u0433\u0438\u043e\u043d\u0435","minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"booleanRole":"certainty","title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043f\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u043c \u0440\u0430\u0437\u043d\u043e\u0433\u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0430 \u0432 \u0440\u0435\u0433\u0438\u043e\u043d\u0430\u0445 (2013 \u0433\u043e\u0434)","height":400,"animation":{"duration":0},"legend":"right","width":700,"hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"isStacked":true,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 6"}
 </script>
   </div>
@@ -1994,7 +1981,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&merge=COLS&range=F1%3AF25%2CJ1%3AL25&gid=72&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"useFormatFromData":true,"title":"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439","minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null}],"title":"\u0427\u0438\u0441\u043b\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u043d\u0435\u0438\u043d\u0441\u0442\u0438\u0442\u0443\u0446\u0438\u043e\u043d\u0430\u043b\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0445 \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0442\u043e\u0440\u043e\u0432 (\u041c\u043e\u0441\u043a\u0432\u0430, \u044f\u043d\u0432\u0430\u0440\u044c 2012 - \u0434\u0435\u043a\u0430\u0431\u0440\u044c 2013 \u0433\u043e\u0434\u0430)","booleanRole":"certainty","height":400,"animation":{"duration":500},"legend":"right","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"isStacked":true,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 18"}
 </script>
   </div>
@@ -2015,7 +2002,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&merge=COLS&range=A2%3AA21%2CB2%3AB21&gid=9&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"vAxes":[{"title":"Left vertical axis title","useFormatFromData":true,"minValue":null,"viewWindow":{"max":null,"min":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"max":null,"min":null},"maxValue":null}],"pieHole":0,"booleanRole":"certainty","title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438 \u043f\u043e \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0442\u043e\u0440\u0430\u043c (\u041c\u043e\u0441\u043a\u0432\u0430, 2013 \u0433\u043e\u0434)","height":400,"animation":{"duration":0},"colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395","#994499","#22AA99","#AAAA11","#6633CC","#E67300","#8B0707","#651067","#329262","#5574A6","#3B3EAC","#B77322","#16D620","#B91383","#F4359E","#9C5935","#A9C413","#2A778D","#668D1C","#BEA413","#0C5922","#743411"],"legend":"labeled","width":700,"focusTarget":"series","is3D":true,"hAxis":{"title":"Horizontal axis title","useFormatFromData":true,"minValue":null,"viewWindow":{"max":null,"min":null},"maxValue":null},"tooltip":{"trigger":"none"}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"PieChart","chartName":"Chart 2"}
 </script>
   </div>
@@ -2055,7 +2042,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&merge=COLS&range=A2%3AA21%2CC2%3AC21&gid=9&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"animation":{"duration":500},"colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395","#994499","#22AA99","#AAAA11","#6633CC","#E67300","#8B0707","#651067","#329262","#5574A6","#3B3EAC","#B77322","#16D620","#B91383","#F4359E","#9C5935","#A9C413","#2A778D","#668D1C","#BEA413","#0C5922","#743411"],"width":700,"is3D":true,"hAxis":{"useFormatFromData":true,"title":"Horizontal axis title","minValue":null,"viewWindow":{"max":null,"min":null},"maxValue":null},"vAxes":[{"useFormatFromData":true,"title":"Left vertical axis title","minValue":null,"viewWindow":{"max":null,"min":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"max":null,"min":null},"maxValue":null}],"pieHole":0,"booleanRole":"certainty","title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043f\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u043c \u0440\u0430\u0437\u043d\u044b\u0445 \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0442\u043e\u0440\u043e\u0432 (\u041c\u043e\u0441\u043a\u0432\u0430, 2013 \u0433\u043e\u0434)","height":400,"legend":"labeled","focusTarget":"series","tooltip":{"trigger":"none"}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"PieChart","chartName":"Chart 3"}
 </script>
   </div>
@@ -2095,7 +2082,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&merge=COLS&range=A2%3AA21%2CD2%3AD21&gid=9&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"title":"\u0421\u0440\u0435\u0434\u043d\u0435\u0435 \u0447\u0438\u0441\u043b\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043d\u0430 \u0430\u043a\u0446\u0438\u044f\u0445 \u0440\u0430\u0437\u043d\u044b\u0445 \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0442\u043e\u0440\u043e\u0432","booleanRole":"certainty","height":400,"animation":{"duration":0},"legend":"none","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"tooltip":{},"isStacked":false},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 1"}
 </script>
   </div>
@@ -2135,7 +2122,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&range=A1%3AM21&gid=55&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"title":"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439","useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null}],"title":"\u041f\u0440\u0435\u0434\u043f\u043e\u0447\u0442\u0435\u043d\u0438\u044f \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0442\u043e\u0440\u043e\u0432 \u043f\u043e \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 (\u041c\u043e\u0441\u043a\u0432\u0430, 2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":400,"animation":{"duration":0},"legend":"right","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"tooltip":{},"isStacked":true},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 40"}
 </script>
   </div>
@@ -2175,7 +2162,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&range=A1%3AK21&gid=52&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"title":"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438","useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null}],"title":"\u041f\u0440\u0435\u0434\u043f\u043e\u0447\u0442\u0435\u043d\u0438\u044f \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0442\u043e\u0440\u043e\u0432 \u043f\u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0443 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 (\u041c\u043e\u0441\u043a\u0432\u0430, 2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":400,"animation":{"duration":0},"legend":"right","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"tooltip":{},"isStacked":true},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 22"}
 </script>
   </div>
@@ -2225,7 +2212,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&range=A1%3AC13&gid=22&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"title":"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438","useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043d\u0430 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u0445 \u0432 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0443 \u043f\u043e\u043b\u0438\u0442\u0437\u0430\u043a\u043b\u044e\u0447\u0435\u043d\u043d\u044b\u0445 \u043f\u043e \u043c\u0435\u0441\u044f\u0446\u0430\u043c (\u041c\u043e\u0441\u043a\u0432\u0430, 2012-2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":400,"animation":{"duration":0},"legend":"right","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"tooltip":{},"isStacked":false},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 13"}
 </script>
   </div>
@@ -2265,7 +2252,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&merge=COLS&range=A2%3AA13%2CC2%3AC13&gid=5&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"animation":{"duration":500},"colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395","#994499","#22AA99","#AAAA11","#6633CC","#E67300","#8B0707","#651067","#329262","#5574A6","#3B3EAC","#B77322","#16D620","#B91383","#F4359E","#9C5935","#A9C413","#2A778D","#668D1C","#BEA413","#0C5922","#743411"],"width":700,"is3D":true,"hAxis":{"title":"Horizontal axis title","useFormatFromData":true,"minValue":null,"viewWindow":{"max":null,"min":null},"maxValue":null},"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindow":{"max":null,"min":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"max":null,"min":null},"maxValue":null}],"pieHole":0,"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043f\u043e \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0435 (\u041c\u043e\u0441\u043a\u0432\u0430, 2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":400,"legend":"labeled","focusTarget":"series","annotations":{"domain":{}},"tooltip":{"trigger":"none"}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"PieChart","chartName":"Chart 2"}
 </script>
   </div>
@@ -2286,7 +2273,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&range=A2%3AB13&gid=5&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"animation":{"duration":500},"colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395","#994499","#22AA99","#AAAA11","#6633CC","#E67300","#8B0707","#651067","#329262","#5574A6","#3B3EAC","#B77322","#16D620","#B91383","#F4359E","#9C5935","#A9C413","#2A778D","#668D1C","#BEA413","#0C5922","#743411"],"width":700,"is3D":true,"hAxis":{"useFormatFromData":true,"title":"Horizontal axis title","minValue":null,"viewWindow":{"max":null,"min":null},"maxValue":null},"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindow":{"max":null,"min":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"max":null,"min":null},"maxValue":null}],"pieHole":0,"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u043f\u043e \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0435 (\u041c\u043e\u0441\u043a\u0432\u0430, 2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":400,"legend":"labeled","focusTarget":"series","tooltip":{"trigger":"none"}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"PieChart","chartName":"Chart 1"}
 </script>
   </div>
@@ -2345,7 +2332,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=1&headers=1&range=A1%3AC17&gid=68&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"title":"% \u043e\u0442 \u043e\u0431\u0449\u0435\u0433\u043e \u0447\u0438\u0441\u043b\u0430 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438 \u0437\u0430 \u0433\u043e\u0434","useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null}],"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438 \u043f\u043e \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0435 (\u041c\u043e\u0441\u043a\u0432\u0430, 2012-2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":400,"animation":{"duration":0},"legend":"right","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"tooltip":{},"isStacked":true},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 4"}
 </script>
   </div>
@@ -2366,7 +2353,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=1&headers=1&range=F1%3AH17&gid=68&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"title":"% \u043e\u0442 \u0447\u0438\u0441\u043b\u0430 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u0437\u0430 \u0433\u043e\u0434","useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null}],"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043d\u0430 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u0445 \u0440\u0430\u0437\u043d\u043e\u0439 \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0438 (\u041c\u043e\u0441\u043a\u0432\u0430, 2012-2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":400,"animation":{"duration":0},"legend":"right","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"isStacked":true,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 5"}
 </script>
   </div>
@@ -2406,7 +2393,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&merge=COLS&range=A2%3AA13%2CD2%3AD13&gid=5&pub=1","options":{"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"booleanRole":"certainty","title":"\u0421\u0440\u0435\u0434\u043d\u0435\u0435 \u0447\u0438\u0441\u043b\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043d\u0430 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u0445 \u0440\u0430\u0437\u043d\u043e\u0439 \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0438 (\u041c\u043e\u0441\u043a\u0432\u0430, 2013 \u0433\u043e\u0434)","height":400,"animation":{"duration":0},"legend":"none","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"isStacked":false,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 3"}
 </script>
   </div>
@@ -2446,7 +2433,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&range=A1%3AM13&gid=37&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"series":{"3":{"color":"#274e13"}},"animation":{"duration":0},"width":400,"hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"useFormatFromData":true,"title":"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439","minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null}],"booleanRole":"certainty","title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043d\u0430 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u0445 \u0440\u0430\u0437\u043d\u043e\u0439 \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0438 \u043f\u043e \u043c\u0435\u0441\u044f\u0446\u0430\u043c (\u041c\u043e\u0441\u043a\u0432\u0430, 2013 \u0433\u043e\u0434)","height":700,"legend":"right","focusTarget":"series","tooltip":{},"isStacked":true},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 9"}
 </script>
   </div>
@@ -2486,7 +2473,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&range=A1%3AM5&gid=70&pub=1","options":{"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"useFormatFromData":true,"title":"% \u043e\u0442 \u043e\u0431\u0449\u0435\u0433\u043e \u0447\u0438\u0441\u043b\u0430 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438 \u0432 \u0440\u0435\u0433\u0438\u043e\u043d\u0435","minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"booleanRole":"certainty","title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438 \u043f\u043e \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0435 \u0432 \u0440\u0430\u0437\u043d\u044b\u0445 \u0440\u0435\u0433\u0438\u043e\u043d\u0430\u0445 (2013 \u0433\u043e\u0434)","height":400,"animation":{"duration":0},"legend":"right","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"isStacked":true,"tooltip":{"trigger":"none"}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 10"}
 </script>
   </div>
@@ -2555,7 +2542,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=1&headers=1&range=A1%3AE3&gid=39&pub=1","options":{"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"useFormatFromData":true,"title":"% \u043e\u0442 \u043e\u0431\u0449\u0435\u0433\u043e \u0447\u0438\u0441\u043b\u0430 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u0432 \u0440\u0435\u0433\u0438\u043e\u043d\u0435","minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"booleanRole":"certainty","title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043c\u0435\u0436\u0434\u0443 \u0441\u043e\u0433\u043b\u0430\u0441\u043e\u0432\u0430\u043d\u043d\u044b\u043c\u0438 \u0438 \u043d\u0435\u0441\u043e\u0433\u043b\u0430\u0441\u043e\u0432\u0430\u043d\u043d\u044b\u043c\u0438 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u043c\u0438 \u0432 \u0440\u0430\u0437\u043d\u044b\u0445 \u0440\u0435\u0433\u0438\u043e\u043d\u0430\u0445 (2013 \u0433\u043e\u0434)","height":400,"animation":{"duration":0},"legend":"right","width":700,"hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"isStacked":true,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 28"}
 </script>
   </div>
@@ -2595,7 +2582,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&range=E11%3AG15&gid=40&pub=1","options":{"vAxes":[{"useFormatFromData":true,"title":null,"minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"10"},"booleanRole":"certainty","title":"\u0421\u0440\u0435\u0434\u043d\u0435\u0435 \u0447\u0438\u0441\u043b\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043d\u0430 \u043e\u0434\u043d\u043e\u043c \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0438 \u0432 \u0437\u0430\u0432\u0438\u0441\u0438\u043c\u043e\u0441\u0442\u0438 \u043e\u0442 \u0441\u043e\u0433\u043b\u0430\u0441\u043e\u0432\u0430\u043d\u043d\u043e\u0441\u0442\u0438 \u0432 \u0440\u0430\u0437\u043d\u044b\u0445 \u0440\u0435\u0433\u0438\u043e\u043d\u0430\u0445 (2013 \u0433\u043e\u0434)","height":400,"animation":{"duration":0},"legend":"right","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"isStacked":false,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 29"}
 </script>
   </div>
@@ -2695,7 +2682,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"http://docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&merge=COLS&range=A2%3AA11%2CC2%3AC11&gid=27&pub=1","options":{"vAxes":[{"useFormatFromData":true,"title":"Left vertical axis title","minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"pieHole":0,"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043f\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u043c \u0440\u0430\u0437\u043d\u044b\u0445 \u0444\u043e\u0440\u043c\u0430\u0442\u043e\u0432 (\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, 2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":400,"animation":{"duration":0},"colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395","#994499","#22AA99","#AAAA11","#6633CC","#E67300","#8B0707","#651067","#329262","#5574A6","#3B3EAC","#B77322","#16D620","#B91383","#F4359E","#9C5935","#A9C413","#2A778D","#668D1C","#BEA413","#0C5922","#743411"],"width":700,"focusTarget":"series","is3D":true,"hAxis":{"useFormatFromData":true,"title":"Horizontal axis title","minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"PieChart","chartName":"Chart 25"}
 </script>
   </div>
@@ -2716,7 +2703,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"http://docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&range=A2%3AB11&gid=27&pub=1","options":{"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"pieHole":0,"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438 \u043f\u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0430\u043c (\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, 2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":400,"animation":{"duration":0},"colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395","#994499","#22AA99","#AAAA11","#6633CC","#E67300","#8B0707","#651067","#329262","#5574A6","#3B3EAC","#B77322","#16D620","#B91383","#F4359E","#9C5935","#A9C413","#2A778D","#668D1C","#BEA413","#0C5922","#743411"],"width":700,"focusTarget":"series","is3D":true,"hAxis":{"title":"Horizontal axis title","useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"PieChart","chartName":"Chart 24"}
 </script>
   </div>
@@ -2756,7 +2743,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"http://docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&range=A2%3AB10&gid=28&pub=1","options":{"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"pieHole":0,"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438 \u043f\u043e \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0442\u043e\u0440\u0430\u043c (\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, 2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":500,"animation":{"duration":0},"colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395","#994499","#22AA99","#AAAA11","#6633CC","#E67300","#8B0707","#651067","#329262","#5574A6","#3B3EAC","#B77322","#16D620","#B91383","#F4359E","#9C5935","#A9C413","#2A778D","#668D1C","#BEA413","#0C5922","#743411"],"width":700,"focusTarget":"series","is3D":true,"hAxis":{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"PieChart","chartName":"Chart 28"}
 </script>
   </div>
@@ -2796,7 +2783,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"http://docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&merge=COLS&range=A2%3AA10%2CC2%3AC10&gid=28&pub=1","options":{"vAxes":[{"useFormatFromData":true,"title":"Left vertical axis title","minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"pieHole":0,"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043f\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u043c \u0440\u0430\u0437\u043d\u044b\u0445 \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0442\u043e\u0440\u043e\u0432 (\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, 2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":500,"animation":{"duration":0},"colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395","#994499","#22AA99","#AAAA11","#6633CC","#E67300","#8B0707","#651067","#329262","#5574A6","#3B3EAC","#B77322","#16D620","#B91383","#F4359E","#9C5935","#A9C413","#2A778D","#668D1C","#BEA413","#0C5922","#743411"],"width":700,"focusTarget":"series","is3D":true,"hAxis":{"useFormatFromData":true,"title":"Horizontal axis title","minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"PieChart","chartName":"Chart 29"}
 </script>
   </div>
@@ -2836,7 +2823,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"http://docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&merge=COLS&range=A2%3AA10%2CD2%3AD10&gid=28&pub=1","options":{"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"booleanRole":"certainty","title":"\u0421\u0440\u0435\u0434\u043d\u0435\u0435 \u0447\u0438\u0441\u043b\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043d\u0430 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u0445 \u0440\u0430\u0437\u043d\u044b\u0445 \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0442\u043e\u0440\u043e\u0432 (\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, 2013 \u0433\u043e\u0434)","height":400,"animation":{"duration":0},"legend":"none","width":700,"hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"tooltip":{},"isStacked":false},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 27"}
 </script>
   </div>
@@ -2876,7 +2863,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"http://docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&merge=COLS&range=A2%3AA9%2CC2%3AC9&gid=24&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"10"},"vAxes":[{"title":"Left vertical axis title","useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"pieHole":0,"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043f\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u043c \u043d\u0430 \u0440\u0430\u0437\u043d\u0443\u044e \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0443 (\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, 2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":400,"animation":{"duration":0},"colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395","#994499","#22AA99","#AAAA11","#6633CC","#E67300","#8B0707","#651067","#329262","#5574A6","#3B3EAC","#B77322","#16D620","#B91383","#F4359E","#9C5935","#A9C413","#2A778D","#668D1C","#BEA413","#0C5922","#743411"],"width":700,"is3D":false,"hAxis":{"title":"Horizontal axis title","useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"PieChart","chartName":"Chart 20"}
 </script>
   </div>
@@ -2897,7 +2884,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"http://docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&range=A2%3AB9&gid=24&pub=1","options":{"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"pieHole":0,"booleanRole":"certainty","title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438 \u043f\u043e \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0435 (\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, 2013 \u0433\u043e\u0434)","height":400,"animation":{"duration":0},"colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395","#994499","#22AA99","#AAAA11","#6633CC","#E67300","#8B0707","#651067","#329262","#5574A6","#3B3EAC","#B77322","#16D620","#B91383","#F4359E","#9C5935","#A9C413","#2A778D","#668D1C","#BEA413","#0C5922","#743411"],"width":700,"is3D":false,"hAxis":{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"PieChart","chartName":"Chart 21"}
 </script>
   </div>
@@ -2937,7 +2924,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"http://docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&merge=COLS&range=A2%3AA9%2CD2%3AD9%2CD10&gid=24&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"10"},"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null}],"series":[{"type":"bars"}],"booleanRole":"certainty","title":"\u0421\u0440\u0435\u0434\u043d\u0435\u0435 \u0447\u0438\u0441\u043b\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043d\u0430 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u0445 \u043d\u0430 \u0440\u0430\u0437\u043d\u0443\u044e \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0443 (\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, 2013 \u0433\u043e\u0434)","height":400,"animation":{"duration":0},"legend":"none","width":700,"focusTarget":"series","annotations":{"domain":{}},"type":"line","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ComboChart","chartName":"Chart 22"}
 </script>
   </div>
@@ -3195,7 +3182,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"http://docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&merge=COLS&range=A1%3AA9%2CC1%3AC9&gid=33&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"vAxes":[{"title":"Left vertical axis title","useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"pieHole":0,"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043f\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u043c \u0440\u0430\u0437\u043d\u043e\u0433\u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0430  (\u041d\u0438\u0436\u043d\u0438\u0439 \u041d\u043e\u0432\u0433\u043e\u0440\u043e\u0434, 2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":400,"animation":{"duration":0},"colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395","#994499","#22AA99","#AAAA11","#6633CC","#E67300","#8B0707","#651067","#329262","#5574A6","#3B3EAC","#B77322","#16D620","#B91383","#F4359E","#9C5935","#A9C413","#2A778D","#668D1C","#BEA413","#0C5922","#743411"],"width":700,"is3D":true,"hAxis":{"title":"Horizontal axis title","useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"PieChart","chartName":"Chart 14"}
 </script>
   </div>
@@ -3216,7 +3203,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"http://docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&range=A2%3AB9&gid=33&pub=1","options":{"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"pieHole":0,"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438 \u043f\u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0430\u043c (\u041d\u0438\u0436\u043d\u0438\u0439 \u041d\u043e\u0432\u0433\u043e\u0440\u043e\u0434, 2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":400,"animation":{"duration":0},"colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395","#994499","#22AA99","#AAAA11","#6633CC","#E67300","#8B0707","#651067","#329262","#5574A6","#3B3EAC","#B77322","#16D620","#B91383","#F4359E","#9C5935","#A9C413","#2A778D","#668D1C","#BEA413","#0C5922","#743411"],"width":700,"focusTarget":"series","is3D":true,"hAxis":{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"PieChart","chartName":"Chart 34"}
 </script>
   </div>
@@ -3258,7 +3245,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"http://docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&merge=COLS&range=A1%3AA9%2CD1%3AD9&gid=33&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"title":"\u0421\u0440\u0435\u0434\u043d\u0435\u0435 \u0447\u0438\u0441\u043b\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u043d\u044b\u0445 \u043d\u0430 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u0445 \u0440\u0430\u0437\u043d\u043e\u0433\u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0430  (\u041d\u0438\u0436\u043d\u0438\u0439 \u041d\u043e\u0432\u0433\u043e\u0440\u043e\u0434, 2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":400,"animation":{"duration":0},"legend":"none","width":700,"annotations":{"domain":{}},"hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"isStacked":false,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 15"}
 </script>
   </div>
@@ -3300,7 +3287,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"http://docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&merge=COLS&range=A2%3AA7%2CC2%3AC7&gid=32&pub=1","options":{"vAxes":[{"title":"Left vertical axis title","useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"pieHole":0,"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043f\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u043c \u0440\u0430\u0437\u043d\u043e\u0439 \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0438  (\u041d\u0438\u0436\u043d\u0438\u0439 \u041d\u043e\u0432\u0433\u043e\u0440\u043e\u0434, 2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":700,"animation":{"duration":0},"colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395","#994499","#22AA99","#AAAA11","#6633CC","#E67300","#8B0707","#651067","#329262","#5574A6","#3B3EAC","#B77322","#16D620","#B91383","#F4359E","#9C5935","#A9C413","#2A778D","#668D1C","#BEA413","#0C5922","#743411"],"width":700,"focusTarget":"series","is3D":true,"hAxis":{"title":"Horizontal axis title","useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"PieChart","chartName":"Chart 32"}
 </script>
   </div>
@@ -3321,7 +3308,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"http://docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&range=A2%3AB7&gid=32&pub=1","options":{"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"pieHole":0,"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438 \u043f\u043e \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0435  (\u041d\u0438\u0436\u043d\u0438\u0439 \u041d\u043e\u0432\u0433\u043e\u0440\u043e\u0434, 2013 \u0433\u043e\u0434)","booleanRole":"certainty","height":700,"animation":{"duration":0},"colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395","#994499","#22AA99","#AAAA11","#6633CC","#E67300","#8B0707","#651067","#329262","#5574A6","#3B3EAC","#B77322","#16D620","#B91383","#F4359E","#9C5935","#A9C413","#2A778D","#668D1C","#BEA413","#0C5922","#743411"],"width":700,"focusTarget":"series","is3D":true,"hAxis":{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"PieChart","chartName":"Chart 31"}
 </script>
   </div>
@@ -3361,7 +3348,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"http://docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=0&merge=COLS&range=A2%3AA7%2CD2%3AD7&gid=32&pub=1","options":{"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"booleanRole":"certainty","title":"\u0421\u0440\u0435\u0434\u043d\u0435\u0435 \u0447\u0438\u0441\u043b\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043d\u0430 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u0445 \u0440\u0430\u0437\u043d\u043e\u0439 \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0438 (\u041d\u0438\u0436\u043d\u0438\u0439 \u041d\u043e\u0432\u0433\u043e\u0440\u043e\u0434, 2013 \u0433\u043e\u0434)","height":400,"animation":{"duration":0},"legend":"none","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"isStacked":false,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 33"}
 </script>
   </div>
@@ -5437,7 +5424,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdG1fOUYzb3VDV3ZPem04QlNINXpGa1E&transpose=0&headers=-1&merge=COLS&range=A4%3AA7%2CB4%3AB7&gid=1&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000000","fontSize":12},"title":"\u0420\u0430\u0441\u0441\u043c\u043e\u0442\u0440\u0435\u043d\u0438\u0435 \u0434\u0435\u043b \u043f\u043e \u0441\u0442\u0430\u0442\u044c\u0435 20.2 \u041a\u043e\u0410\u041f (2013 \u0433\u043e\u0434)","legend":{"position":"right"},"is3D":true,"useFirstColumnAsDomain":1,"pieSliceText":"percentage","width":700,"height":400,"animation":{"duration":0}},"state":{},"isDefaultVisualization":true,"chartType":"PieChart"}
 </script>
   </div>
@@ -5477,7 +5464,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdG1fOUYzb3VDV3ZPem04QlNINXpGa1E&transpose=0&headers=-1&merge=COLS&range=G4%3AG7%2CH4%3AH7&gid=1&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000000","fontSize":12},"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043d\u0430\u043a\u0430\u0437\u0430\u043d\u0438\u0439 \u043f\u043e \u0441\u0442\u0430\u0442\u044c\u0435 20.2 \u041a\u043e\u0410\u041f (2013 \u0433\u043e\u0434)","legend":{"position":"right"},"is3D":true,"useFirstColumnAsDomain":1,"pieSliceText":"percentage","width":700,"height":400,"animation":{"duration":0}},"state":{},"isDefaultVisualization":true,"chartType":"PieChart"}
 </script>
   </div>
@@ -5555,7 +5542,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdG1fOUYzb3VDV3ZPem04QlNINXpGa1E&transpose=0&headers=-1&merge=COLS&range=D3%3AD4%2CE3%3AE4&gid=1&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000000","fontSize":12},"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u0439 \u043f\u043e \u0441\u0442\u0430\u0442\u044c\u0435 20.2 \u041a\u043e\u0410\u041f (2013 \u0433\u043e\u0434)","legend":{"position":"right"},"is3D":true,"useFirstColumnAsDomain":1,"pieSliceText":"percentage","width":700,"height":400,"animation":{"duration":0}},"state":{},"isDefaultVisualization":true,"chartType":"PieChart"}
 </script>
   </div>
@@ -5614,7 +5601,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdG1fOUYzb3VDV3ZPem04QlNINXpGa1E&transpose=1&headers=1&range=A9%3AC13&gid=2&pub=1","options":{"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"useFormatFromData":true,"title":"% \u043e\u0442 \u0432\u0441\u0435\u0445 \u0440\u0430\u0441\u0441\u043c\u043e\u0442\u0440\u0435\u043d\u043d\u044b\u0445 \u0434\u0435\u043b","minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"booleanRole":"certainty","title":"\u0420\u0430\u0441\u0441\u043c\u043e\u0442\u0440\u0435\u043d\u0438\u0435 \u0434\u0435\u043b \u043f\u043e \u0441\u0442\u0430\u0442\u044c\u0435 20.2 \u041a\u043e\u0410\u041f \u0432 2012 \u0438 2013 \u0433\u043e\u0434\u0443","height":400,"animation":{"duration":0},"legend":"right","width":700,"useFirstColumnAsDomain":true,"hAxis":{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"title":"\u0433\u043e\u0434","useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"isStacked":true},"state":{},"view":{"columns":[{"calc":"stringify","type":"string","sourceColumn":0},1,2,3,4]},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 11"}
 </script>
   </div>
@@ -5654,7 +5641,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdG1fOUYzb3VDV3ZPem04QlNINXpGa1E&transpose=1&headers=-1&merge=ROWS&range=D20%3AE20%2CD21%3AE21%2CD22%3AE22%2CD23%3AE23&gid=1&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000000","fontSize":12},"vAxes":[{"gridlines":{"color":"#B7B7B7"},"viewWindow":{"max":null,"min":null},"minValue":null,"maxValue":null,"logScale":false,"useFormatFromData":true},{"viewWindow":{"max":null,"min":null},"minValue":null,"maxValue":null,"logScale":false,"useFormatFromData":true}],"series":{"0":{"color":"#4684EE"},"1":{"color":"#DC3912"},"2":{"color":"#FF9900"},"3":{"color":"#008000"}},"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043d\u0430\u043a\u0430\u0437\u0430\u043d\u0438\u0439 \u043f\u043e \u0441\u0442. 20.2 \u041a\u043e\u0410\u041f","height":400,"animation":{"duration":500},"legend":{"position":"right"},"width":700,"is3D":false,"useFirstColumnAsDomain":0,"hAxis":{"minValue":null,"maxValue":null,"viewWindow":null,"viewWindowMode":null,"useFormatFromData":true},"isStacked":true,"focusTarget":"series","tooltip":{"trigger":"none"},"booleanRole":"certainty"},"state":{},"isDefaultVisualization":true,"chartType":"ColumnChart"}
 </script>
   </div>
@@ -6903,7 +6890,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"http://docs.google.com/spreadsheet/tq?key=0AqL_R49TiUuAdHNLdHRiUS1GaW9BVGlIc3RlOXB0V1E&transpose=0&headers=1&range=A44%3AC47&gid=29&pub=1","dataTable":{"cols":[{"id":"A","pattern":"","p":{},"label":"","type":"string"},{"id":"B","pattern":"#0.###############","p":{},"label":"\u0434\u0440\u0443\u0433\u0438\u0435","type":"number"},{"id":"C","pattern":"#0.###############","label":"\u043d\u0430\u0446\u0438\u043e\u043d\u0430\u043b\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0430","type":"number"}],"rows":[{"c":[{"v":"\u041c\u043e\u0441\u043a\u0432\u0430"},{"f":"91,5","v":91.5},{"f":"8,5","v":8.5}]},{"c":[{"v":"\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433"},{"f":"80,7","v":80.7},{"f":"19,3","v":19.3}]},{"c":[{"v":"\u041d\u0438\u0436\u043d\u0438\u0439 \u041d\u043e\u0432\u0433\u043e\u0440\u043e\u0434"},{"f":"64,2","v":64.2},{"f":"35,8","v":35.8}]}],"p":null},"options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"series":{"0":{"color":"#434343"},"1":{"color":"#990000"}},"legendTextStyle":{"color":"#222","fontSize":"10"},"animation":{"duration":0},"width":700,"hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"vAxes":[{"useFormatFromData":true,"title":null,"minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null}],"booleanRole":"certainty","title":"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 (\u0432 %)","height":500,"legend":"right","focusTarget":"series","isStacked":true,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 2"}
 </script>
   </div>
@@ -8096,7 +8083,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdDk2d29JNnFtYnpwWmx4bXJWZlBBSVE&transpose=0&headers=1&merge=COLS&range=G106%3AG109%2CH106%3AH109%2CI106%3AI109&gid=8&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000000","fontSize":10},"vAxes":{"0":{"gridlines":{"color":"#B7B7B7"}}},"series":{"0":{"color":"#4684EE"},"1":{"color":"#DC3912"}},"title":"\u0421\u043e\u043f\u043e\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0441 \u043f\u0440\u0435\u0434\u044b\u0434\u0443\u0449\u0438\u043c \u043a\u0432\u0430\u0440\u0442\u0430\u043b\u043e\u043c \u0438 \u0430\u043d\u0430\u043b\u043e\u0433\u0438\u0447\u043d\u044b\u043c \u043a\u0432\u0430\u0440\u0442\u0430\u043b\u0430\u043c\u0438 \u043f\u0440\u0435\u0434\u044b\u0434\u0443\u0449\u0435\u0433\u043e \u0433\u043e\u0434\u0430","legend":{"position":"right"},"is3D":false,"useFirstColumnAsDomain":1,"hAxis":{},"width":700,"height":400,"animation":{"duration":0}},"state":{},"isDefaultVisualization":true,"chartType":"ColumnChart"}
 </script>
   </div>
@@ -8136,7 +8123,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdDk2d29JNnFtYnpwWmx4bXJWZlBBSVE&transpose=0&headers=1&merge=COLS&range=A62%3AA74%2CB62%3AB74%2CC62%3AC74%2CD62%3AD74&gid=8&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000000","fontSize":12},"vAxes":{"0":{"title":"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439","gridlines":{"color":"#B7B7B7"}}},"series":{"0":{"color":"#4684EE"},"1":{"color":"#6AA84F"},"2":{"color":"#FF0000"}},"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u0432 \u041c\u043e\u0441\u043a\u0432\u0435 \u043f\u043e \u043c\u0435\u0441\u044f\u0446\u0430\u043c (\u044f\u043d\u0432\u0430\u0440\u044c 2012 - \u043c\u0430\u0440\u0442 2014)","legend":{"position":"right"},"is3D":false,"useFirstColumnAsDomain":1,"hAxis":{},"width":700,"height":400,"animation":{"duration":0}},"state":{},"isDefaultVisualization":true,"chartType":"AreaChart"}
 </script>
   </div>
@@ -8157,7 +8144,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdDk2d29JNnFtYnpwWmx4bXJWZlBBSVE&transpose=0&headers=1&merge=COLS&range=H77%3AH89%2CI77%3AI89%2CJ77%3AJ89&gid=8&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000000","fontSize":12},"vAxes":{"0":{"gridlines":{"color":"#B7B7B7"}}},"series":{"0":{"color":"#4684EE"},"1":{"color":"#6AA84F"},"2":{"color":"#FF0000"}},"title":"\u0421\u0440\u0435\u0434\u043d\u0435\u0435 \u0447\u0438\u0441\u043b\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u0432 \u041c\u043e\u0441\u043a\u0432\u0435 (\u044f\u043d\u0432\u0430\u0440\u044c 2012 - \u043c\u0430\u0440\u0442 2014)","legend":{"position":"right"},"is3D":false,"useFirstColumnAsDomain":0,"hAxis":{},"width":700,"height":400,"animation":{"duration":0}},"state":{},"isDefaultVisualization":true,"chartType":"ColumnChart"}
 </script>
   </div>
@@ -8235,7 +8222,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdDk2d29JNnFtYnpwWmx4bXJWZlBBSVE&transpose=1&headers=-1&merge=ROWS&range=E1%3AF1%2CE2%3AF2%2CE3%3AF3%2CE4%3AF4%2CE5%3AF5%2CE6%3AF6%2CE7%3AF7%2CE8%3AF8%2CE9%3AF9%2CE10%3AF10&gid=10&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000000","fontSize":12},"vAxes":{"0":{"titleTextStyle":{"color":"#222222","italic":true,"fontSize":10},"title":"null","gridlines":{"color":"#B7B7B7"}}},"series":{"0":{"color":"#4684EE"},"1":{"color":"#DC3912"},"2":{"color":"#FF9900"},"3":{"color":"#008000"},"4":{"color":"#666666"},"5":{"color":"#4942CC"},"6":{"color":"#CB4AC5"},"7":{"color":"#D6AE00"},"8":{"color":"#336699"}},"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u0438 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u043f\u043e \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0435","legend":{"position":"right"},"is3D":false,"useFirstColumnAsDomain":1,"hAxis":{},"isStacked":true,"width":700,"height":400,"animation":{"duration":0}},"state":{},"isDefaultVisualization":true,"chartType":"ColumnChart"}
 </script>
   </div>
@@ -8256,7 +8243,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdDk2d29JNnFtYnpwWmx4bXJWZlBBSVE&transpose=1&headers=-1&merge=ROWS&range=F43%3AH43%2CF44%3AH44%2CF45%3AH45%2CF46%3AH46%2CF47%3AH47%2CF48%3AH48%2CF49%3AH49%2CF50%3AH50%2CF51%3AH51%2CF52%3AH52&gid=10&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000000","fontSize":12},"vAxes":{"0":{"titleTextStyle":{"color":"#222222","italic":true,"fontSize":10},"title":"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u0432 % \u043e\u0442 \u043e\u0431\u0449\u0435\u0433\u043e \u0447\u0438\u0441\u043b\u0430 \u0437\u0430 \u043c\u0435\u0441\u044f\u0446","gridlines":{"color":"#B7B7B7"}}},"series":{"0":{"color":"#4684EE"},"1":{"color":"#DC3912"},"2":{"color":"#FF9900"},"3":{"color":"#008000"},"4":{"color":"#666666"},"5":{"color":"#4942CC"},"6":{"color":"#CB4AC5"},"7":{"color":"#D6AE00"},"8":{"color":"#336699"}},"title":"\u0425\u0440\u043e\u043d\u043e\u043b\u043e\u0433\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u0440\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u043f\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u043c \u0440\u0430\u0437\u043d\u043e\u0439 \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0438 (\u041c\u043e\u0441\u043a\u0432\u0430, \u044f\u043d\u0432\u0430\u0440\u044c-\u043c\u0430\u0440\u0442 2014 \u0433\u043e\u0434\u0430)","height":400,"animation":{"duration":0},"legend":{"position":"right"},"width":700,"is3D":false,"useFirstColumnAsDomain":1,"hAxis":{},"isStacked":true},"state":{},"isDefaultVisualization":true,"chartType":"ColumnChart"}
 </script>
   </div>
@@ -8296,7 +8283,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdDk2d29JNnFtYnpwWmx4bXJWZlBBSVE&transpose=0&headers=1&merge=COLS&range=A86%3AA95%2CB86%3AB95%2CC86%3AC95%2CD86%3AD95%2CE86%3AE95%2CF86%3AF95%2CG86%3AG95%2CH86%3AH95%2CI86%3AI95&gid=10&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000000","fontSize":12},"vAxes":{"0":{"titleTextStyle":{"color":"#222222","italic":true,"fontSize":10},"title":"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439","gridlines":{"color":"#B7B7B7"}}},"series":{"0":{"color":"#4684EE"},"1":{"color":"#DC3912"},"2":{"color":"#FF9900"},"3":{"color":"#008000"},"4":{"color":"#666666"},"5":{"color":"#4942CC"},"6":{"color":"#CB4AC5"},"7":{"color":"#D6AE00"}},"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u043f\u043e \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0430\u043c \u0438 \u0444\u043e\u0440\u043c\u0430\u0442\u0430\u043c (\u041c\u043e\u0441\u043a\u0432\u0430, \u044f\u043d\u0432\u0430\u0440\u044c - \u043c\u0430\u0440\u0442 2014 \u0433\u043e\u0434\u0430)","legend":{"position":"right"},"is3D":false,"useFirstColumnAsDomain":1,"hAxis":{},"isStacked":true,"width":700,"height":400,"animation":{"duration":0}},"state":{},"isDefaultVisualization":true,"chartType":"ColumnChart"}
 </script>
   </div>
@@ -8317,7 +8304,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdDk2d29JNnFtYnpwWmx4bXJWZlBBSVE&transpose=0&headers=1&merge=COLS&range=A98%3AA107%2CB98%3AB107%2CC98%3AC107%2CD98%3AD107%2CE98%3AE107%2CF98%3AF107%2CG98%3AG107%2CH98%3AH107%2CI98%3AI107%2CJ98%3AJ107&gid=10&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000000","fontSize":12},"vAxes":{"0":{"titleTextStyle":{"color":"#222222","italic":true,"fontSize":10},"title":"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439","gridlines":{"color":"#B7B7B7"}}},"series":{"0":{"color":"#4684EE"},"1":{"color":"#DC3912"},"2":{"color":"#FF9900"},"3":{"color":"#008000"},"4":{"color":"#666666"},"5":{"color":"#4942CC"},"6":{"color":"#CB4AC5"},"7":{"color":"#D6AE00"},"8":{"color":"#336699"}},"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u043f\u043e \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0442\u043e\u0440\u0430\u043c \u0438 \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0435","legend":{"position":"right"},"is3D":false,"useFirstColumnAsDomain":1,"hAxis":{},"isStacked":true,"width":700,"height":400,"animation":{"duration":0}},"state":{},"isDefaultVisualization":true,"chartType":"ColumnChart"}
 </script>
   </div>
@@ -8357,7 +8344,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdDk2d29JNnFtYnpwWmx4bXJWZlBBSVE&transpose=1&headers=-1&merge=ROWS&range=E58%3AF58%2CE59%3AF59%2CE60%3AF60%2CE61%3AF61%2CE62%3AF62%2CE63%3AF63%2CE64%3AF64%2CE65%3AF65%2CE66%3AF66&gid=10&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000000","fontSize":12},"vAxes":{"0":{"gridlines":{"color":"#B7B7B7"}}},"series":{"0":{"color":"#3366CC"},"1":{"color":"#DC3912"},"2":{"color":"#FF9900"},"3":{"color":"#008000"},"4":{"color":"#666666"},"5":{"color":"#4942CC"},"6":{"color":"#CB4AC5"},"7":{"color":"#D6AE00"}},"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u0438 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u043f\u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0430\u043c (\u041c\u043e\u0441\u043a\u0432\u0430, \u044f\u043d\u0432\u0430\u0440\u044c - \u043c\u0430\u0440\u0442 2014 \u0433\u043e\u0434\u0430)","legend":{"position":"right"},"is3D":false,"useFirstColumnAsDomain":1,"hAxis":{},"isStacked":true,"width":700,"height":400,"animation":{"duration":0}},"state":{},"isDefaultVisualization":true,"chartType":"ColumnChart"}
 </script>
   </div>
@@ -8546,7 +8533,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdDBfamR2ZFJqYmR5NWxfaTBhS0xFcHc&transpose=1&headers=-1&merge=ROWS&range=E1%3AF1%2CE2%3AF2%2CE3%3AF3%2CE4%3AF4%2CE5%3AF5%2CE6%3AF6%2CE7%3AF7&gid=7&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000000","fontSize":12},"vAxes":{"0":{"gridlines":{"color":"#B7B7B7"}}},"series":{"0":{"color":"#4684EE"},"1":{"color":"#DC3912"},"2":{"color":"#FF9900"},"3":{"color":"#008000"},"4":{"color":"#666666"},"5":{"color":"#4942CC"}},"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u0438 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438 \u043f\u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0430\u043c (\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u044f\u043d\u0432\u0430\u0440\u044c - \u043c\u0430\u0440\u0442 2014 \u0433\u043e\u0434\u0430)","legend":{"position":"right"},"is3D":false,"useFirstColumnAsDomain":1,"hAxis":{},"isStacked":true,"width":700,"height":400,"animation":{"duration":0}},"state":{},"isDefaultVisualization":true,"chartType":"ColumnChart"}
 </script>
   </div>
@@ -8586,7 +8573,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdDBfamR2ZFJqYmR5NWxfaTBhS0xFcHc&transpose=0&headers=1&merge=COLS&range=A2%3AA7%2CD2%3AD7&gid=7&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000000","fontSize":12},"vAxes":{"0":{"gridlines":{"color":"#B7B7B7"}}},"series":{"0":{"color":"#4684EE"}},"title":"\u0421\u0440\u0435\u0434\u043d\u0435\u0435 \u0447\u0438\u0441\u043b\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u043d\u044b\u0445 \u043d\u0430 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u0445 \u0440\u0430\u0437\u043d\u043e\u0433\u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0430 (\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u044f\u043d\u0432\u0430\u0440\u044c-\u043c\u0430\u0440\u0442 2014 \u0433\u043e\u0434\u0430)","legend":{"position":"none"},"is3D":false,"useFirstColumnAsDomain":1,"hAxis":{},"width":700,"height":400,"animation":{"duration":0}},"state":{},"isDefaultVisualization":true,"chartType":"ColumnChart"}
 </script>
   </div>
@@ -8626,7 +8613,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdDBfamR2ZFJqYmR5NWxfaTBhS0xFcHc&transpose=1&headers=-1&merge=ROWS&range=E1%3AF1%2CE2%3AF2%2CE3%3AF3%2CE4%3AF4%2CE5%3AF5%2CE6%3AF6%2CE7%3AF7%2CE8%3AF8%2CE9%3AF9&gid=8&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000000","fontSize":12},"vAxes":{"0":{"title":"null","gridlines":{"color":"#B7B7B7"}}},"series":{"0":{"color":"#4684EE"},"1":{"color":"#DC3912"},"2":{"color":"#FF9900"},"3":{"color":"#008000"},"4":{"color":"#666666"},"5":{"color":"#4942CC"},"6":{"color":"#CB4AC5"},"7":{"color":"#D6AE00"}},"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u0438 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u0441 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f\u043c\u0438 \u043f\u043e \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0435 (\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u044f\u043d\u0432\u0430\u0440\u044c - \u043c\u0430\u0440\u0442 2014 \u0433\u043e\u0434\u0430)","legend":{"position":"right"},"is3D":false,"useFirstColumnAsDomain":1,"hAxis":{"title":"null"},"isStacked":true,"width":700,"height":400,"animation":{"duration":0}},"state":{},"isDefaultVisualization":true,"chartType":"ColumnChart"}
 </script>
   </div>
@@ -8685,7 +8672,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdDBfamR2ZFJqYmR5NWxfaTBhS0xFcHc&transpose=0&headers=1&merge=COLS&range=A2%3AA9%2CD2%3AD9&gid=8&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000000","fontSize":12},"vAxes":{"0":{"gridlines":{"color":"#B7B7B7"}}},"series":{"0":{"color":"#4684EE"}},"title":"\u0421\u0440\u0435\u0434\u043d\u0435\u0435 \u0447\u0438\u0441\u043b\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u043d\u044b\u0445 \u043d\u0430 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u0445 \u0440\u0430\u0437\u043d\u043e\u0439 \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0438 (\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u044f\u043d\u0432\u0430\u0440\u044c - \u043c\u0430\u0440\u0442 2014 \u0433\u043e\u0434\u0430)","legend":{"position":"none"},"is3D":false,"useFirstColumnAsDomain":1,"hAxis":{},"width":700,"height":400,"animation":{"duration":0}},"state":{},"isDefaultVisualization":true,"chartType":"ColumnChart"}
 </script>
   </div>
@@ -8725,7 +8712,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdDBfamR2ZFJqYmR5NWxfaTBhS0xFcHc&transpose=1&headers=-1&merge=ROWS&range=E1%3AF1%2CE2%3AF2%2CE3%3AF3%2CE4%3AF4%2CE5%3AF5%2CE6%3AF6%2CE7%3AF7%2CE8%3AF8%2CE9%3AF9%2CE10%3AF10%2CE11%3AF11&gid=9&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000000","fontSize":12},"vAxes":{"0":{"gridlines":{"color":"#B7B7B7"}}},"series":{"0":{"color":"#4684EE"},"1":{"color":"#DC3912"},"2":{"color":"#FF9900"},"3":{"color":"#008000"},"4":{"color":"#666666"},"5":{"color":"#4942CC"},"6":{"color":"#CB4AC5"},"7":{"color":"#D6AE00"},"8":{"color":"#336699"},"9":{"color":"#DD4477"}},"title":"\u0420\u0430\u0441\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u0438 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u0439 \u043f\u043e \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0442\u043e\u0440\u0430\u043c (\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433, \u044f\u043d\u0432\u0430\u0440\u044c - \u043c\u0430\u0440\u0442 2014 \u0433\u043e\u0434\u0430)","legend":{"position":"right"},"is3D":false,"useFirstColumnAsDomain":1,"hAxis":{},"isStacked":true,"width":700,"height":400,"animation":{"duration":0}},"state":{},"isDefaultVisualization":true,"chartType":"ColumnChart"}
 </script>
   </div>
@@ -8981,7 +8968,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdDZJWk5Cd1E1UHU5TjhIUHRWMjAyNmc&transpose=1&headers=1&range=G62%3AI88&gid=2&pub=1","options":{"vAxes":[{"titleTextStyle":{"color":"#222","italic":true,"fontSize":"10"},"useFormatFromData":true,"title":"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439","minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"logScale":false,"viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":"12"},"booleanRole":"certainty","title":"\u0417\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f \u0432 \u0441\u0432\u044f\u0437\u0438 \u0441 \u041e\u043b\u0438\u043c\u043f\u0438\u0439\u0441\u043a\u0438\u043c\u0438 \u0438\u0433\u0440\u0430\u043c\u0438 \u0432 \u0421\u043e\u0447\u0438","height":400,"animation":{"duration":0},"legend":"right","width":700,"focusTarget":"series","hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"isStacked":true,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"ColumnChart","chartName":"Chart 2"}
 </script>
   </div>
@@ -9146,7 +9133,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+    <script type="text/javascript" src="charts.js">
 {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Aky0cw5_8oSBdERrWmRlSDFtU3RkRXpuQmpTLUlUblE&transpose=0&headers=1&merge=COLS&range=B7%3AB28%2CC7%3AC28&gid=3&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000000","fontSize":12},"vAxes":{"0":{"titleTextStyle":{"color":"#222222","italic":true,"fontSize":10},"title":"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0439 \u0437\u0430 \u043c\u0435\u0441\u044f\u0446","gridlines":{"color":"#B7B7B7"}}},"series":{"0":{"color":"#4684EE"}},"title":"\u0417\u0430\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u044f \u043d\u0430 \u043c\u0435\u0440\u043e\u043f\u0440\u0438\u044f\u0442\u0438\u044f\u0445 \u0432 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0443 \u0444\u0438\u0433\u0443\u0440\u0430\u043d\u0442\u043e\u0432 \"\u0411\u043e\u043b\u043e\u0442\u043d\u043e\u0433\u043e \u0434\u0435\u043b\u0430\" (\u041c\u043e\u0441\u043a\u0432\u0430, \u043c\u0430\u0439 2012 - \u043c\u0430\u0440\u0442 2014)","height":400,"animation":{"duration":0},"legend":{"position":"none"},"width":700,"is3D":false,"useFirstColumnAsDomain":1,"hAxis":{"title":"null"}},"state":{},"isDefaultVisualization":true,"chartType":"LineChart"}
 </script>
   </div>
@@ -9752,6 +9739,9 @@
 </div>
 
 </div>
-
+<script type="text/javascript">
+    var toc = new Toc()
+    toc.init()
+</script>
 </body>
 </html>

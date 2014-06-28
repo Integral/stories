@@ -336,7 +336,13 @@ a {
   display: none;
 }
 
+.toc-entry.active {
+  background: #000;
+}
 
+.toc-entry.active > a {
+  color: #fff;
+}
 /* Text (Paragraph)
 ------------------------------------------------------- */
 
