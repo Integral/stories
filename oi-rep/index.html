@@ -21,6 +21,107 @@
       return $(".blur").css("opacity", oVal);
     });
 
+    var Toc = function() {
+      this.winScrollTop;
+      this.lastAnchor;
+      this.lastLevel;
+      this.currentAnchor;
+      this.currentAnchorId;
+      this.currentLevel;
+      this.headings;
+      this.structure;
+    }
+
+    Toc.prototype.init = function(){
+      var that = this;
+      this.build();
+      $(window).scroll(function(){
+        that.scroll()
+      })
+    }
+
+    Toc.prototype.build = function(){
+      var lastLevel_1,
+          lastLevel_2,
+          that = this;
+      this.structure = {}
+      this.headings = $('div.article-container').find("div.heading");
+      this.headings.each(function(key, el) {
+        var level = $(this).attr('class').split('level-')[1].replace('row', ''),
+            id = $(this).attr('id');
+
+        if (level == 1) {
+          that.structure[id] = {id: id, children: {}}
+          lastLevel_1 = id;
+        } else if (level == 2) {
+          that.structure[lastLevel_1].children[id] = {id: id, children: {}}
+          that.structure[id] = {id: id, parent: lastLevel_1, children: {}}
+          lastLevel_2 = id;
+        } else if (level == 3) {
+          that.structure[lastLevel_2].children[id] = {id: id, parent: lastLevel_2}
+          that.structure[id] = {id: id, parent: lastLevel_2}
+        }
+      })
+    }
+
+    Toc.prototype.show = function(){
+      var that = this;
+      if (that.structure[this.currentAnchorId].children){
+        jQuery.each(that.structure[this.currentAnchorId].children,function(key, val){
+          $('.toc-entries a[href=#' + val.id + ']').parent().fadeIn()
+        })
+      }
+      if (that.structure[this.currentAnchorId].parent){
+        jQuery.each(that.structure[this.structure[this.currentAnchorId].parent].children,function(key, val){
+          $('.toc-entries a[href=#' + val.id + ']').parent().fadeIn()
+        })
+      }
+    }
+
+    Toc.prototype.hide = function(){
+      var that = this;
+      if (that.structure[this.lastAnchor.replace('#','')].parent){
+        jQuery.each(that.structure[this.structure[this.lastAnchor.replace('#','')].parent].children,function(key, val){
+          $('.toc-entries a[href=#' + val.id + ']').parent().fadeOut()
+        })
+      }
+    }
+
+    Toc.prototype.scroll = function(){
+      var that = this;
+      this.winScrollTop = $(window).scrollTop();
+
+      setTimeout(function() {
+        var closestAnchorDistance = null,
+            closestAnchorIdx = null;
+
+        that.headings.each(function(idx) {
+          var distance = Math.abs(($(this).next().length ? $(this).next() : $(this)).offset().top - that.winScrollTop + 800);
+          if (closestAnchorDistance == null || distance < closestAnchorDistance) {
+            closestAnchorDistance = distance;
+            closestAnchorIdx = idx;
+          } else {
+            return false;
+          }
+        });
+
+        that.currentAnchorId = $(that.headings[closestAnchorIdx]).attr('id');
+        that.currentAnchor = '#' + that.currentAnchorId;
+
+        if (that.lastAnchor != that.currentAnchor) {
+          that.currentLevel = $('.toc-entries a[href=#' + that.currentAnchorId + ']').parent().attr('class').split('level-')[1].replace(/\s/g, '');
+          $('.toc-entries a[href=' + that.lastAnchor + ']').parent().removeClass('active')
+          $('.toc-entries a[href=' + that.currentAnchor + ']').parent().addClass('active')
+          that.show()
+          if (that.currentLevel < that.lastLevel) {
+            that.hide()
+          }
+          that.lastLevel = that.currentLevel;
+        }
+
+        that.lastAnchor = that.currentAnchor;
+      }, 0);
+    }
     // window.onload = function() {
     //   var imageEls = document.querySelectorAll(".figure img");
     //   for (var i = 0; i < imageEls.length; i++) {
@@ -67,7 +168,7 @@
       <!-- Article Abstract -->
       
         <div class="article-abstract">
-          Годовой отчет ОВД-Инфо за 2013 год
+          Годовой доклад ОВД-Инфо за 2013 год
         </div>
       
 
@@ -78,6 +179,8 @@
 <div id="toc" class="row content-node cover">
     <div class="three columns"></div>
     <div class='six columns'>
+    </div>
+    <div class="three columns">
       <!-- Table of Contents -->
        
 
@@ -186,7 +289,6 @@
       </div>
       
     </div>
-    <div class="three columns"></div>
 </div>
 
 
@@ -7409,7 +7511,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    Региональные законы вносят дополнительные ограничения свободы собраний. Речь идет, прежде всего, о запрете на проведение общественно-политических акций на конкретных улицах и площадях (например, на Невском проспекте, Исаакиевской и Дворцовой площадях в Санкт-Петербурге), а также на других территориях: вблизи остановок общественного транспорта и вокзалов, спортивных, культурных, образовательных, медицинских и госучреждений, храмов, на стройках и даже на тротуарах — в разных субъектах РФ эти списки существенно отличаются, как и представление о том, что озгначает понятие “вблизи”. Вводятся и другие ограничения: Мосгордума, например, объявляет одиночные пикеты, объединенные “единой целью и единым организатором”, одним мероприятием, требующим согласования; в краснодарский закон вносится формулировка о том, что “после отведения специального места для митингов организация массовых мероприятий в других местах на территории муниципального образования, как правило, запрещается и допускается только по специальному разрешению уполномоченного органа”.
+    Региональные законы вносят дополнительные ограничения свободы собраний. Речь идет, прежде всего, о запрете на проведение общественно-политических акций на конкретных улицах и площадях (например, на Невском проспекте, Исаакиевской и Дворцовой площадях в Санкт-Петербурге), а также на других территориях: вблизи остановок общественного транспорта и вокзалов, спортивных, культурных, образовательных, медицинских и госучреждений, храмов, на стройках и даже на тротуарах — в разных субъектах РФ эти списки существенно отличаются, как и представление о том, что означает понятие “вблизи”. Вводятся и другие ограничения: Мосгордума, например, объявляет одиночные пикеты, объединенные “единой целью и единым организатором”, одним мероприятием, требующим согласования; в краснодарский закон вносится формулировка о том, что “после отведения специального места для митингов организация массовых мероприятий в других местах на территории муниципального образования, как правило, запрещается и допускается только по специальному разрешению уполномоченного органа”.
   </div>
 
   <!-- Right column -->
@@ -7472,7 +7574,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    Не намечается положительных тенденций со свободой собраний и на практике. Суещственной проблемой остаются неправомерные задержания участников публичных мероприятий — сокращение общего числа задержаний объясняется скорее снижением численности протестных выступлений, чем изменением отношения полиции к уличным протестам. Об этом свидетельствуют зафиксированные в 2013 году случаи массовых задержаний, а также многочисленные задержания на мероприятиях, не требующих согласования, — одиночных пикетах, равно как и в “гайд-парках” — на площадках, специально выделенных под собрания. Судебные решения по административным делам на задержанных в большинстве случаев носят обвинительный уклон - судьи полностью поддерживают позицию полиции.
+    Не намечается положительных тенденций со свободой собраний и на практике. Существенной проблемой остаются неправомерные задержания участников публичных мероприятий — сокращение общего числа задержаний объясняется скорее снижением численности протестных выступлений, чем изменением отношения полиции к уличным протестам. Об этом свидетельствуют зафиксированные в 2013 году случаи массовых задержаний, а также многочисленные задержания на мероприятиях, не требующих согласования, — одиночных пикетах, равно как и в “гайд-парках” — на площадках, специально выделенных под собрания. Судебные решения по административным делам на задержанных в большинстве случаев носят обвинительный уклон - судьи полностью поддерживают позицию полиции.
   </div>
 
   <!-- Right column -->
@@ -7676,7 +7778,7 @@
 
   <!-- Content -->
   <div class='six columns content'>
-    В результате в 2013 году защитники прав сексуальных меньшинств оказываются едва ли не самыми активными акторами в судебной борьбе за право на свободу собраний, — хотя и не единственными. Активиств “Другой России” Эдуард Лимонов иницировал рассмотрение нового законодательства в Конституционном суде - жалоба Лимонова, который регулярно задерживается на митингах “Стратегии-31” в Москве и был одним из первых, кто пострадал от нового закона о митингах, была объединена с поданным ранее заявлением депутатов Госдумы от КПРФ.
+    В результате в 2013 году защитники прав сексуальных меньшинств оказываются едва ли не самыми активными акторами в судебной борьбе за право на свободу собраний, — хотя и не единственными. Лидер “Другой России” Эдуард Лимонов иницировал рассмотрение нового законодательства в Конституционном суде - жалоба Лимонова, который регулярно задерживается на митингах “Стратегии-31” в Москве и был одним из первых, кто пострадал от нового закона о митингах, была объединена с поданным ранее заявлением депутатов Госдумы от КПРФ.
   </div>
 
   <!-- Right column -->
@@ -9614,7 +9716,7 @@
 
       <!-- Publish date -->
       <div class="published-on">
-        “Протест на тормозах: политические задержания в 2013 году” was published on Sun May 18 2014. It has been modified on Wed Jun 25 2014.
+        “Протест на тормозах: политические задержания в 2013 году” was published on Sun May 18 2014. It has been modified on Sat Jun 28 2014.
       </div>
 
 
